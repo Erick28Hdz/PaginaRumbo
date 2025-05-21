@@ -1,89 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Cambié a 'es' para español -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumbo||Turismo</title>
+    <title>Rumbo | Turismo</title>
     <link rel="icon" href="img/brujula.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
- 
 </head>
+
 <body>
 
-<!-- cabecera del website -->
+    <!-- Cabecera del sitio web -->
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
             <ul class="menu">
-                <li><a href="index.html">Incio</a></li>
-                <li><a href="planes">Planes</a></li>
-                <li><a href="destinos">Destino</a></li>
-                <li><a href="contacto">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li> <!-- Corregido "Incio" -->
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div id="hero">
-            <img src="img/brujula.png" alt="">
+            <img src="img/brujula.png" alt="Brújula">
             <h1>RUMBO</h1>
-            <p>EL SITIO WEB DE TURISMO IDEAL PARA TI</p>
+            <p>El sitio web de turismo ideal para ti</p>
             <button>EMPEZAR</button>
-
-       
         </div>
+    </header>
 
-    </head>
-
-<!-- secciones pricipales -->   |
-
+    <!-- Secciones principales -->
     <main>
+        <section id="inicio">
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                En <strong>RUMBO</strong> somos una empresa apasionada por mostrar la riqueza natural, cultural y humana
+                de nuestro país. Creamos experiencias de viaje auténticas, responsables y accesibles, para que descubras
+                los destinos más sorprendentes de Colombia. Nuestra misión es conectar personas con lugares
+                inolvidables, promoviendo el turismo local con calidad, calidez y compromiso. Con
+                <strong>RUMBO</strong>, tu próxima aventura nacional comienza con confianza.
+            </p>
+        </section>
+
         <section id="planes">
-            <h2>PLANES</h2>
-            <p>En <strong>RUMBO</strong> tenemos los iguientes planes para ti</p>
-            <br>
-            <p>Selecciona el plan que más se ajuste a la experiencia que quieras vivir</p>
+            <h2>Planes</h2>
+            <p>En <strong>RUMBO</strong> tenemos los siguientes planes para ti.</p>
+            <p>Selecciona el plan que más se ajuste a la experiencia que quieras vivir:</p>
             <div class="fila">
                 <div class="col_plan">
-                    <img src="img/senderismo.png" alt="senderismo">
-                    <h3>senderismo</h3>
+                    <div class="imagen-titulo">
+                        <img src="img/senderismo.png" alt="Senderismo">
+                        <h3>Senderismo</h3>
+                    </div>
                     <p>5 a 8 personas</p>
-                    <br>
                     <p>6 km de ruta</p>
-                    <br>
-                    <p>150.000 Pesos</p>
-                    <br>
+                    <p>$150.000 COP</p>
                     <p>Precio por persona</p>
                 </div>
                 <div class="col_plan">
-                    <img src="img/canotaje.png" alt="senderismo">
-                    <h3>canotaje</h3>
+                    <div class="imagen-titulo">
+                        <img src="img/senderismo.png" alt="Canotaje">
+                        <h3>Canotaje</h3>
+                    </div>
                     <p>5 a 8 personas</p>
-                    <br>
                     <p>6 km de ruta</p>
-                    <br>
-                    <p>150.000 Pesos</p>
-                    <br>
+                    <p>$150.000 COP</p>
                     <p>Precio por persona</p>
                 </div>
                 <div class="col_plan">
-                    <img src="img/senderismo.png" alt="senderismo">
-                    <h3>camping</h3>
+                    <div class="imagen-titulo">
+                        <img src="img/senderismo.png" alt="Camping">
+                        <h3>Camping</h3>
+                    </div>
                     <p>5 a 8 personas</p>
-                    <br>
                     <p>6 km de ruta</p>
-                    <br>
-                    <p>150.000 Pesos</p>
-                    <br>
+                    <p>$150.000 COP</p>
                     <p>Precio por persona</p>
                 </div>
             </div>
-
         </section>
-       
+
         <section id="destinos">
-            <h2>DESTINOS</h2>
+            <h2>Destinos</h2>
             <div class="fila">
                 <div class="col-destinos">
                     <img src="img/cartagena.png" alt="Cartagena">
-                    <h3>cartagena</h3>
+                    <h3>Cartagena</h3>
                 </div>
                 <div class="col-destinos">
                     <img src="img/barranquilla.png" alt="Barranquilla">
@@ -93,52 +95,57 @@
             <div class="fila">
                 <div class="col-destinos">
                     <img src="img/llanos.png" alt="Llanos">
-                    <h3>Llanos orientales</h3>
+                    <h3>Llanos Orientales</h3>
                 </div>
                 <div class="col-destinos">
-                    <img src="img/laguajira.png" alt="Laguajira">
-                    <h3>La guajira</h3>
+                    <img src="img/laguajira.png" alt="La Guajira">
+                    <h3>La Guajira</h3>
                 </div>
             </div>
         </section>
-        <section id="contacto">
-            <h2>CONTACTO</h2>
-            <P>Comparte con nosotros tus datos de contacto y te enviaremos </P>
-            <br>
-            <p>toda la informacón de los medios de pagos.</p>
 
-            <form action="#">
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Comparte con nosotros tus datos de contacto y te enviaremos</p>
+            <p>Toda la información de los medios de pago.</p>
+            <form>
                 <div class="fila">
                     <input type="text" placeholder="Nombre">
-                    <input type="number" placeholder="Telefono">
+                    <input type="number" placeholder="Teléfono">
                 </div>
                 <div class="fila">
                     <input type="email" placeholder="Email">
-                   <select name="" id="">
-                    <option value="#">Ciudad</option>
-                    <option value="Bogota"></option>
-                    <option value="Medellin"></option>
-                    <option value="Cali"></option>
-                   </select>
+                    <select>
+                        <option disabled selected>Ciudad</option>
+                        <option value="Bogota">Bogotá</option>
+                        <option value="Medellin">Medellín</option>
+                        <option value="Cali">Cali</option>
+                    </select>
                 </div>
-                <button>ENVIAR</button>
             </form>
-
+            <button>ENVIAR</button>
         </section>
-
     </main>
 
-<!-- pie de pagina -->
-
+    <!-- Pie de página -->
     <footer>
-        <p>© Todos los derechos reservados</p>
-       <br>
-       <p>contacto@rumbo.com</p>
-       <br>
-       <p>+57 3212444445</p>
-       <br>
-       <p>Cr 90 #93 - 20</p>
-
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h3>RUMBO - Tu próxima aventura</h3>
+                <p>Explora el mundo con nosotros. Encuentra los mejores destinos, paquetes exclusivos y una experiencia
+                    inolvidable. ¡Tu viaje comienza aquí!</p>
+            </div>
+            <div class="footer-contacto">
+                <h3>Contacto</h3>
+                <p>📧 <strong>contacto@rumbo.com</strong></p>
+                <p>📞 <strong>+57 321 244 4445</strong></p>
+                <p>📍 <strong>Cr. 90 #93 - 20</strong></p>
+            </div>
+            <div class="footer-legal">
+                <p>© 2025 RUMBO. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>

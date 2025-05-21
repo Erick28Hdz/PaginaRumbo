@@ -1,259 +1,602 @@
 /* quitamos las margenes de las etiquetas */
-*{
+* {
     margin: 0;
     padding: 0;
-   
 }
 
 /* creacion de variables css */
-:root{
- --primary-color :#ffff00;
- --secundary-color: #434434;
- --titulos: 40px;
- --parrafos: 20px;
- 
+:root {
+    --primary-color: #ffff00;
+    --secundary-color: #434434;
+    --titulos: 40px;
+    --parrafos: 20px;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-header{
+/* Sección del header */
+header {
     width: 100%;
     height: 100vh;
     position: relative;
     background: url("../img/bg-header.png");
-   
     background-size: cover;
-    /* background-repeat: no-repeat; */
     background-position: center;
 }
 
-header nav{
+/* Nav bar del header */
+header nav {
     width: 70%;
     background-color: rgba(255, 0, 0, 0);
     margin: 0 auto;
-    display: flex ;
-    justify-content: space-between ;
-    align-items: center ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 40px;
 }
 
-header nav .logo{
+header nav .logo {
     transition: 0.5s;
 }
 
-header nav .logo:hover{
+header nav .logo:hover {
     transform: scale(0.9);
 }
 
-header nav .menu{
+header nav .menu {
     display: flex;
 }
 
-nav .menu li{
+nav .menu li {
     margin: 0 10px;
     list-style: none;
 }
 
-.menu li a{
+.menu li a {
     color: white;
     font-size: var(--titulos);
     text-decoration: none;
-    padding: 10px 15px ;
+    padding: 10px 15px;
     transition: 1s;
 }
 
-.menu li a:hover{
-    border-bottom: 2px solid #fff;  
+.menu li a:hover {
+    border-bottom: 2px solid #fff;
 }
 
-header #hero{
+/* Sección de hero en el header */
+header #hero {
     width: 50%;
     min-width: 650px;
     background-color: rgba(255, 0, 0, 0);
-    margin: 200px auto;
+    margin: 20px auto;
     text-align: center;
 }
-header #hero img{
+
+header #hero img {
     transition: .5s;
     cursor: pointer;
 }
-header #hero img:hover{
+
+header #hero img:hover {
     transform: rotate(360deg);
 }
 
-
-header #hero h1{
+header #hero h1 {
     color: var(--primary-color);
     font-size: var(--titulos);
 }
 
-
-header #hero p{
+header #hero p {
     font-size: var(--parrafos);
     color: #fff;
-
 }
 
-header #hero button{
-    margin-top: 150px;
+header #hero button {
+    margin-top: 100px;
     background: var(--primary-color);
     padding: 12px 11px;
     font-size: 30px;
-    color: #666;
+    color: var(--secundary-color);
     border-color: transparent;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-header #hero button:hover{
+header #hero button:hover {
     background: #000;
-    border-radius: 0;
-
+    border-radius: 10px;
+    color: var(--primary-color);
 }
 
-main{
+/* Sección del main */
+main {
     width: 100%;
     position: relative;
-
 }
 
+/* Sección del inicio del main */
+#inicio {
+    background-color: var(--secundary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-#planes{
+#inicio h2 {
+    font-size: var(--titulos);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#inicio p {
+    font-size: var(--parrafos);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Sección de los planes del main */
+#planes {
     width: 100%;
     text-align: center;
-    padding: 200px 0;
+    padding: 40px 0;
     background-color: #fff;
 }
 
-#planes h2{
+#planes h2 {
     font-size: var(--titulos);
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-#planes p{
+#planes p {
     font-size: var(--parrafos);
+    margin: 5px 0;
 }
 
-#planes .fila{
-    width: 70%;
-    min-width: 1000px;
+/* Diseño de tarjetas de planes*/
+#planes .fila {
     display: flex;
-    margin: 50px auto;
-    justify-content: space-around;
-  position: relative;
+    padding: 50px;
+    justify-content: space-between;
 }
-#planes .fila .col-plan{
-    position: relative;
 
-}
-.fila .col_plan h3{
-    text-transform: uppercase;
-    color: var(--primary-color);
-    font-size: 26px;
-    position: absolute;
-    top: 100px;
-    width: 19%;
+.col_plan {
+    background-color: var(--secundary-color);
+    color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    width: 24%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease;
     text-align: center;
-    z-index: 9;
+    position: relative;
 }
 
-.fila .col_plan img{
-    transition: .4s;
+.col_plan:hover {
+    transform: translateY(-10px);
 }
-.fila .col_plan img:hover{
+
+.imagen-titulo {
+    position: relative;
+    height: 65%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.imagen-titulo img {
+    object-fit: cover;
+    transition: 0.4s;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.imagen-titulo img:hover {
+    transform: scale(1.05);
+    border-radius: 0;
+}
+
+.imagen-titulo h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.imagen-titulo img:hover {
     border-radius: 50%;
 }
 
-
-#destinos{
+/* Sección de los destinos del main */
+#destinos {
     width: 100%;
-    padding: 120px 0 40px;
+    padding: 40px 0;
     background: url("../img/bg-destinos.png");
-
 }
 
-#destinos h2{
+#destinos h2 {
     font-size: var(--titulos);
     color: var(--primary-color);
-    margin-bottom: 50px auto ;
+    margin-bottom: 30px auto;
     font-weight: 700;
     text-align: center;
 }
 
-#destinos .fila{
+#destinos .fila {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-   margin-top: 20px;
+    justify-content: space-around;
+    margin: 30px 0;
 }
 
-.fila .col-destinos h3{
+.col-destinos {
+    width: 20%;
+    margin: 10px auto;
+}
+
+.col-destinos h3 {
     color: #fff;
     font-size: 32px;
     text-transform: uppercase;
-
+    text-align: center;
 }
 
-#contacto{
+/* Sección de contacto */
+#contacto {
     width: 100%;
     text-align: center;
-    padding: 100px 0 120px;
-    background: var(--primary-color) ;
-
+    padding: 40px 0;
+    background: var(--primary-color);
 }
 
-
-#contacto h2{
+#contacto h2 {
     font-size: var(--titulos);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-#contacto form{
-    width: 50%;
-    margin:  0 auto;
-}
-
-#contacto p{
+#contacto p {
     font-size: var(--parrafos);
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
-#contacto form .fila{
-    display: flex ;
-
+#contacto form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
-form .fila input{
-    width: 50%;
-    padding: 8px 12px;
-    font-size: var(--parrafos);
-    margin: 10px 20px;
+form {
+    max-width: 800px;
+    margin: 0 auto;
 }
-form .fila select{
-    width: 50%;
-    padding: 8px 12px;
-    font-size: var(--parrafos);
-    margin: 10px 20px;
+
+form .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
 }
-form button{
-    background-color: #aeae06;
-    color:#fff;
-    margin-top: 40px;
+
+form .fila input,
+form .fila select {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+form .fila input:focus,
+form .fila select:focus {
+    outline: none;
+    border: solid 2px var(--secundary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    background-color: var(--secundary-color);
+    color: #fff;
+    margin-top: 20px;
     padding: 12px 20px;
     font-size: 22px;
     border-radius: 4px;
     border: transparent;
 }
 
+button:hover {
+    background-color: #000;
+}
 
-footer{
-    background-color: black;
+/* Sección del footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-branding {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-branding h3 {
+    font-size: var(--titulos);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.footer-branding p {
+    font-size: var(--parrafos);
+    line-height: 1.6;
+}
+
+.footer-contacto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contacto h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--secundary-color);
+}
+
+.footer-contacto p {
+    font-size: var(--parrafos);
+    margin: 8px 0;
+}
+
+.footer-legal {
+    width: 100%;
     text-align: center;
-    padding: 30px;
-    color: #fff;
-    font-size: 20px;
-    line-height: 24px;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    color: #aaa;
+}
+
+
+/* Responsive para tablets (≤1024px) */
+@media screen and (max-width: 1024px) {
+    header nav {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header #hero {
+        width: 80%;
+        min-width: unset;
+    }
+
+    #planes .fila {
+        align-items: center;
+        padding: 20px;
+    }
+
+    .col_plan {
+        width: 30%;
+        margin-bottom: 30px;
+    }
+
+    #destinos .fila {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .col-destinos {
+        width: 40%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacto form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    form .fila {
+        gap: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Responsive para móviles (≤768px) */
+@media screen and (max-width: 768px) {
+    :root {
+        --titulos: 28px;
+        --parrafos: 16px;
+    }
+
+    header nav .menu {
+        gap: 10px;
+        text-align: center;
+    }
+
+    .menu li a {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    header #hero button {
+        margin-top: 50px;
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+
+    #planes .fila {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    #planes .fila,
+    #destinos .fila {
+        align-items: center;
+    }
+
+    .col_plan {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-destinos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-destinos img {
+        width: 70%;
+        margin: 10px;
+    }
+
+    .col-destinos h3 {
+        font-size: 20px;
+    }
+
+    #contacto form {
+        width: 60%;
+    }
+
+    form .fila input,
+    form .fila select {
+        min-width: unset;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+/* Responsive para pantallas pequeñas (≤480px) */
+@media screen and (max-width: 480px) {
+    header nav {
+        padding-top: 20px;
+    }
+
+    header #hero h1 {
+        font-size: 24px;
+    }
+
+    header #hero p {
+        font-size: 16px;
+    }
+
+    header nav .menu {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #planes p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .imagen-titulo h3 {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+
+    .imagen-titulo img {
+        width: 95%;
+    }
+
+    #destinos h2 {
+        font-size: var(--titulos);
+    }
+
+    #destinos .fila {
+        margin: 0 auto;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .col_plan {
+        width: 80%;
+    }
+
+    .col-destinos {
+        width: 60%;
+    }
+
+    .col-destinos img {
+        display: flex;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .col-destinos h3 {
+        font-size: 18px;
+    }
+
+    #contacto p {
+        margin: 10px 30px 20px;
+    }
+
+    #contacto form {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form .fila {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    form .fila input,
+    form .fila select {
+        width: 80%;
+        min-width: unset;
+        font-size: 16px;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    .footer-branding h3,
+    .footer-contacto h3 {
+        font-size: 22px;
+    }
+
+    .footer-legal {
+        font-size: 12px;
+    }
 }
